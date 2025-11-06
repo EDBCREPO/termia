@@ -1,5 +1,7 @@
 # TERMIA | A Gemini CLI Chat Client (using nodepp)
 
+![ezgif-7b51292b9724d0](https://github.com/user-attachments/assets/58cc01ca-66dc-4180-b45a-19f0760f38ee)
+
 This is a simple command-line interface (CLI) chat client built with the nodepp framework (a C++ analogue to Node.js) designed to interact with the Google Gemini API.
 
 It allows you to type prompts directly into your terminal and see the AI's response streamed back, character by character.
