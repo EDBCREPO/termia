@@ -27,3 +27,8 @@ void worker_file_pipe( file_t file ) {
     worker::add( arg, file );
 }
 ```
+## How it works
+
+[![IMAGE](https://miro.medium.com/v2/resize:fit:720/format:webp/1*7RczdtorVGJNy5aWHmJXHw.jpeg)](https://medium.com/p/21b1b3709cf2)
+
+[Click Here](https://medium.com/p/21b1b3709cf2)
