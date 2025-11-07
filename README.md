@@ -15,6 +15,10 @@ It allows you to type prompts directly into your terminal and see the AI's respo
 - A Google Gemini API Key.
 ```
 
+```bash
+g++ -o main main.cpp -I./include -lssl -lcrypto ; ./main
+```
+
 ## Windows stream::pipe( fs::std_input() ) Bug
 
 Okay, technically this is not a bug, but officially, Windows does not let us work with standard I/O files asynchronously (thanks, Windows!). This means the line stream::pipe( fin ); might not behave as expected for non-blocking input on Windows systems.
