@@ -68,10 +68,6 @@ void onMain() {
     process::env::init( ".env" );
     auto fin = fs::std_input();
 
-    fin.onData([=]( string_t data ){
-        gpt_next( data );
-    });
-
     onGPT.on([=]( string_t data ){
 
         auto pos = type::bind( (ulong)0 );
@@ -92,12 +88,18 @@ void onMain() {
 
     });
 
-    /*WINDOWS STD OVERLAPPED BUG*//*
+    fin.onData([=]( string_t data ){
+        gpt_next( data );
+    });
+    
+    #if _OS_ == NODEPP_OS_WINDOWS
     generator::stream::pipe task;
     worker::add( task, fin );
-    *//*WINDOWS STD OVERLAPPED BUG*/
-
+    #else 
     stream::pipe( fin );
+	#endif
+    
+    gpt_next("hello!");
 
 }
 
